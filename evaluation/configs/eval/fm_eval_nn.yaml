@@ -1,0 +1,18 @@
+reader:
+  name: standard
+  rawdata_dir: FM-Bench/Dataset
+  dataset_dir: test_fmbench_root/fmbench_root_4000.hdf5
+  num_kpt: 4000
+
+matcher:
+  name: NN
+  mutual_check: False
+  ratio_th: 0.8
+
+evaluator:
+  name: FM
+  seq: ['CPC','KITTI','TUM','Tanks_and_Temples']
+  num_pair: 4000
+  inlier_th: 0.003
+  sgd_inlier_th: 0.05
+

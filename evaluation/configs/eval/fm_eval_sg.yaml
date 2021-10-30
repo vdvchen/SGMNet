@@ -1,0 +1,22 @@
+reader:
+  name: standard
+  rawdata_dir: FM-Bench/Dataset
+  dataset_dir: test_fmbench_root/fmbench_root_4000.hdf5
+  num_kpt: 4000
+
+matcher:
+  name: SG
+  model_dir: ../weights/sg/root
+  net_channels: 128
+  layer_num: 9
+  head: 4
+  use_score_encoding: True
+  sink_iter: [100]
+  p_th: 0.2
+
+evaluator:
+  name: FM
+  seq: ['CPC','KITTI','TUM','Tanks_and_Temples']
+  num_pair: 4000
+  inlier_th: 0.003
+  sgd_inlier_th: 0.05

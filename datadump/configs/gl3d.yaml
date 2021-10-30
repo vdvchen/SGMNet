@@ -1,0 +1,30 @@
+data_name: gl3d_train
+rawdata_dir: gl3d_rawdata
+feature_dump_dir: dump_desc_dir
+dataset_dump_dir: dataset_dir
+pairs_per_seq: 1000
+dump_train: True
+dump_valid: True
+check_desc: True
+exclude_seq:  ['tourism_0230','tourism_0084','tourism_0114','tourism_0440','tourism_0118',
+                'tourism_0654','tourism_0281','tourism_0481','tourism_0176','tourism_0048','tourism_0013','tourism_0282','tourism_0659',
+                '000000000000000000000013','000000000000000000000014','tourism_0703','tourism_0500','tourism_0571','tourism_0686',
+                'tourism_0542','tourism_0576','tourism_0693','tourism_0375','00000000000000000000001c','tourism_0508','tourism_0548','tourism_0289',
+                'tourism_0697','tourism_0355','tourism_0660','tourism_0653','tourism_0707','tourism_0492','tourism_0537','5692a4c2adafac1f14201821',
+                '584e875c7072670e72c1ec94','tourism_0632','tourism_0063','tourism_0673']
+num_process: 8
+angle_th: [3,60]
+overlap_th: [0.1,0.5]
+corr_th: 5
+incorr_th: 10
+min_corr: 25
+min_incorr: 10
+
+extractor:
+  name: root #root or sp
+  num_kpt: 1000
+  resize: [-1] 
+  overwrite: False
+  extract: False
+  num_process: 4
+  det_th: 0.00001

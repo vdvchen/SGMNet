@@ -1,0 +1,28 @@
+reader:
+  name: standard
+  rawdata_dir: FM-Bench/Dataset
+  dataset_dir: test_fmbench_root/fmbench_root_4000.hdf5
+  num_kpt: 4000
+
+matcher:
+  name: SGM
+  model_dir: ../weights/sgm/root
+  seed_top_k: [256,256]
+  seed_radius_coe: 0.01
+  net_channels: 128
+  layer_num: 9
+  head: 4
+  seedlayer: [0,6]
+  use_mc_seeding: True
+  use_score_encoding: False
+  conf_bar: [1.11,0.1] #set to [1,0.1] for sp
+  sink_iter: [10,100]
+  detach_iter: 1000000
+  p_th: 0.2
+  
+evaluator:
+  name: FM
+  seq: ['CPC','KITTI','TUM','Tanks_and_Temples']
+  num_pair: 4000
+  inlier_th: 0.003
+  sgd_inlier_th: 0.05

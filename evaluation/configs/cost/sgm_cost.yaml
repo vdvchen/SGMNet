@@ -1,0 +1,11 @@
+seed_top_k: [256,256]
+seed_radius_coe: 0.01
+net_channels: 128
+layer_num: 9
+head: 4
+seedlayer: [0,6]
+use_mc_seeding: True
+use_score_encoding: False
+conf_bar: [1,0]
+sink_iter: [10,10]
+detach_iter: 1000000

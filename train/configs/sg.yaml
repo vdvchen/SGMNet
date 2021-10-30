@@ -1,0 +1,5 @@
+net_channels: 128
+layer_num: 9
+head: 4
+use_score_encoding: True
+p_th: 0.2

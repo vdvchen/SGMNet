@@ -1,0 +1,17 @@
+reader:
+  name: standard
+  rawdata_dir: scannet_eval
+  dataset_dir: scannet_test_root/scannet_root_2000.hdf5
+  num_kpt: 2000
+
+matcher:
+  name: NN
+  mutual_check: False
+  ratio_th: 0.8
+
+evaluator:
+  name: AUC
+  rescale: 640
+  num_pair: 1500
+  inlier_th: 0.005
+

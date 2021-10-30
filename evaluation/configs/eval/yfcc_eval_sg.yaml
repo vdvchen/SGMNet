@@ -1,0 +1,22 @@
+reader:
+  name: standard
+  rawdata_dir: yfcc_rawdata
+  dataset_dir: yfcc_test_root/yfcc_root_2000.hdf5
+  num_kpt: 2000
+  
+matcher:
+  name: SG
+  model_dir: ../weights/sg/root
+  net_channels: 128
+  layer_num: 9
+  head: 4
+  use_score_encoding: True
+  sink_iter: [100]
+  p_th: 0.2
+
+evaluator:
+  name: AUC
+  rescale: 1600
+  num_pair: 4000
+  inlier_th: 0.005
+

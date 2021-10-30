@@ -1,0 +1,14 @@
+data_name: fmbench
+rawdata_dir: FM-Bench/Dataset
+feature_dump_dir: test_fmbench_root
+dataset_dump_dir: test_fmbench_root
+data_seq: ['CPC','KITTI','TUM','Tanks_and_Temples']
+
+extractor:
+  name: root #root or sp
+  num_kpt: 4000
+  resize: [-1]
+  overwrite: False
+  extract: True
+  num_process: 4
+  det_th: 0.00001

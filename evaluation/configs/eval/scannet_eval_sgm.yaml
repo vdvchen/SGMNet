@@ -1,0 +1,28 @@
+reader:
+  name: standard
+  rawdata_dir: scannet_eval
+  dataset_dir: scannet_test_root/scannet_root_2000.hdf5
+  num_kpt: 2000
+
+matcher:
+  name: SGM
+  model_dir: ../weights/sgm/root
+  seed_top_k: [128,128]
+  seed_radius_coe: 0.01
+  net_channels: 128
+  layer_num: 9
+  head: 4
+  seedlayer: [0,6]
+  use_mc_seeding: True
+  use_score_encoding: False
+  conf_bar: [1.11,0.1]
+  sink_iter: [10,100]
+  detach_iter: 1000000
+  p_th: 0.2
+
+evaluator:
+  name: AUC
+  rescale: 640
+  num_pair: 1500
+  inlier_th: 0.005
+
